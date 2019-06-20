@@ -1,7 +1,6 @@
 FROM node:10-alpine
-RUN mkdir -p /home/DOCKER-HELLOWORLD-NODEJS/node_modules && chown -R node:node /home/DOCKER-HELLOWORLD-NODEJS
-WORKDIR /home/DOCKER-HELLOWORLD-NODEJS
-COPY package.json ./
+RUN mkdir -p /node_modules && chown -R node:node /
+WORKDIR /
 USER node
 RUN npm install
 COPY --chown=node:node . .
