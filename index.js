@@ -10,6 +10,10 @@ app.get('/',(req,res)=>{
     res.render('home.hbs')
 })
 
+app.post('/', (req, res)=> {
+    console.log(req);
+}
+
 app.listen(port,()=>{
     console.log('Listening on Port '+port)
 })
